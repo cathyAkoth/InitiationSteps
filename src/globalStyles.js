@@ -61,4 +61,8 @@ html{
         width:100%;
         height:auto;
     }
+    img,png{
+        width:60%;
+        height:auto;
+    }
 `;
