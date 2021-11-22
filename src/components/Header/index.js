@@ -92,6 +92,36 @@ display:none;
 }
 `;
 
+const MobileMenu = styled.nav`
+  display: none;
+  @media only Screen and (max-width: 48em) {
+    display: flex;
+  }
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  overflow-x: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  opacity: ${(props) => (props.clicked ? "1" : 0)};
+  visibility: ${(props) => (props.clicked ? "visible" : "hidden")};
+  transition: all 0.5s;
+  z-index: -10;
+  background-color: rgb(53 53 63 / 95%);
+  border-radius: 20px;
+  margin: 0.5rem;
+  a {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 1.5rem;
+    cursor: pointer;
+  }
+`;
+
 const Button = styled.button`
 background-color: var(--purple);
 padding: 0.5rem 1rem;
@@ -131,7 +161,22 @@ const Header = () => {
   </Nav>
   <HamburgerBtn clicked={click} onClick={() => setClick(!click)}>
         <span></span>
-      </HamburgerBtn>
+  </HamburgerBtn>
+  <MobileMenu clicked={click}>
+        <a href="#home" onClick={(e) => handleClick("home", e)}>
+          Home
+        </a>
+        <a href="#about" onClick={(e) => handleClick("about", e)}>
+          About Us
+        </a>
+        <a href="#services" onClick={(e) => handleClick("services", e)}>
+          Services
+        </a>
+        <a href="#contact" onClick={(e) => handleClick("contact", e)}>
+          <Button>Contact Us</Button>
+        </a>
+      </MobileMenu>
+
   </Headers>
   );
 };
