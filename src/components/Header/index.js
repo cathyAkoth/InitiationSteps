@@ -24,6 +24,34 @@ const Logo = styled.a`
   }
   
 `;
+
+const Nav = styled.nav`
+width: 25rem;
+max-width: 40rem;
+display: flex;
+align-items:center;
+justify-content: space-between;
+
+a{
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.5;
+
+  &::after{
+    content:"";
+    display: block;
+    height:3px;
+    width: 3px;
+    background: transparent;
+    transition: width 0.5s;
+  }
+    &:not(:last-child):hover::after {
+      width: 100%;
+      background: var(--purple);
+    }
+  }
+
+`;
 const Header = () => {
   return( 
   
@@ -33,14 +61,14 @@ const Header = () => {
     <img src={logo} alt="initiation-steps" />
     {/* <h3>Initiation Steps</h3> */}
   </Logo>
-  <nav>
+  <Nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#contact">
       <button>Home</button>
       </a>
-  </nav>
+  </Nav>
 
   </Headers>
   );
