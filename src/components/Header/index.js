@@ -7,10 +7,14 @@ const Headers = styled.header`
   justify-content:space-between;
   align-items:center;
   padding: 1rem 5rem;
-  background-color: var(--nav);
-  color: var(--white);
-  position: relative;
+  /* background-color: var(--nav); */
+  background-color: whitesmoke;
+  color: #09009b;
+  /* color: var(--white); */
+  /* position: relative; */
   z-index: 500;
+  position:fixed;
+  width: 100%;
 `;
 
 const Logo = styled.a`
@@ -39,7 +43,8 @@ justify-content: space-between;
 
 a{
   font-weight: 600;
-  color: var(--white);
+  /* color: var(--white); */
+  color: #09009b;
   line-height: 1.5;
 
   &::after{
@@ -52,7 +57,7 @@ a{
   }
     &:not(:last-child):hover::after {
       width: 100%;
-      background: var(--purple);
+      background: #ffa400;
     }
   }
 
@@ -123,7 +128,7 @@ const MobileMenu = styled.nav`
 `;
 
 const Button = styled.button`
-background-color: var(--purple);
+background-color: #ffa400;
 padding: 0.5rem 1rem;
 border-radius: 20px;
 color:var(--white);
