@@ -11,14 +11,28 @@ const Headers = styled.header`
   position: relative;
   z-index: 500;
 `;
+
+const Logo = styled.a`
+  display: flex;
+  align-items: center;
+  width: 5rem;
+  height: auto;
+  cursor: pointer;
+
+  img{
+    margin-right: 0.5rem;
+  }
+  
+`;
 const Header = () => {
   return( 
   
   <Headers>
-  <div>
+    <Logo>
+  
     <img src={logo} alt="initiation-steps" />
     {/* <h3>Initiation Steps</h3> */}
-  </div>
+  </Logo>
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>

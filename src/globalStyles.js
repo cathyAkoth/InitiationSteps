@@ -62,7 +62,7 @@ html{
         height:auto;
     }
     img,png{
-        width:60%;
+        width:100%;
         height:auto;
     }
 `;
