@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import logo from "../../assets/logos.png";
+import { useEffect, useRef, useState } from "react";
 
 const Headers = styled.header`
   display: flex;
@@ -32,6 +33,10 @@ display: flex;
 align-items:center;
 justify-content: space-between;
 
+@media only Screen and (max-width: 48em) {
+  display: none;
+}
+
 a{
   font-weight: 600;
   color: var(--white);
@@ -58,6 +63,11 @@ background-color:transparent;
 width:2rem;
 height:2px;
 cursor:pointer;
+display:none;
+
+@media only Screen and (max-width: 48em) {
+  display: inline-block;
+}
 
 &::before,
 ::after{
@@ -71,13 +81,14 @@ cursor:pointer;
   cursor: pointer;
   transition: all 0.3s;
 }
-&::before{
-  top: -0.5rem;
-  transform: rotate(0);
-}
-&::after{
-  top: 0.5rem;
-  transform: rotate(0);
+&::before {
+    top: ${(props) => (props.clicked ? "0" : "-0.5rem")};
+    transform: ${(props) => (props.clicked ? "rotate(135deg)" : "rotate(0)")};
+  }
+  &::after {
+    top: ${(props) => (props.clicked ? "0" : "0.5rem")};
+    transform: ${(props) => (props.clicked ? "rotate(-135deg)" : "rotate(0)")};
+  
 }
 `;
 
@@ -98,6 +109,10 @@ transition: all 0.2s;
 }
 `;
 const Header = () => {
+
+  const [click, setClick] = useState(false); 
+  const handleClick = () => setClick(!click);
+  
   return( 
   
   <Headers>
@@ -110,13 +125,13 @@ const Header = () => {
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
-    <a href="#contact">
+    <a href="#contact" onClick={() => {}}>
       <Button>Contact Us</Button>
       </a>
   </Nav>
-  <HamburgerBtn>
-    <span />
-  </HamburgerBtn>
+  <HamburgerBtn clicked={click} onClick={() => setClick(!click)}>
+        <span></span>
+      </HamburgerBtn>
   </Headers>
   );
 };
