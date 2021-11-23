@@ -113,7 +113,7 @@ const Lb = styled.div`
 `;
 
 const Topic = styled.span`
-  display: flex;
+  display: inline-block;
   align-items: center;
   justify-content: center;
   background-color: var(--nav);
@@ -122,6 +122,7 @@ const Topic = styled.span`
   font-size: calc(0.4rem + 0.4vw);
   padding: 0.5rem 1rem;
   border-radius: 20px;
+ 
 `;
 
 const Circle = styled.span`
@@ -190,6 +191,7 @@ const HeroSection = () => {
           <Topic>
             <Circle />
             <span>We Build Web</span>
+            
           </Topic>
           <Title>Transforming your digital presence</Title>
           <SubText>
