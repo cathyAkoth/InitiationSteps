@@ -46,7 +46,7 @@ const LeftText = styled.div`
 const Footer = () => {
   return (
     <FOOTER>
-      <LeftText>
+      {/* <LeftText>
         © 2021 Built and Design by{" "}
         <a href="https://www.youtube.com/channel/UCeYt6blRBKuNrEg_-282fSA">
           @CodeBucks
@@ -65,7 +65,7 @@ const Footer = () => {
         <a href="mailto:codebucks27@gmail.com?subject=Email From Your Website">
           <img src={Gmail} alt="Gmail" />
         </a>
-      </RightText>
+      </RightText> */}
     </FOOTER>
   );
 };
