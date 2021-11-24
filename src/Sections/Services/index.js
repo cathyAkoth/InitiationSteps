@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+import TextBlock from "../../components/TextBlock";
+import SvgBlock from "../../components/SvgBlock";
+
 const ServiceSection= styled.div`
   width: 100vw;
   display:flex;
@@ -57,6 +60,29 @@ const Triangle = styled.span`
   border-right: 1.2rem solid transparent;
   border-top: 1.2rem solid var(--background);
 `;
+const Content = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10rem 10rem;
+  /* margin-bottom: 10rem; */
+  position: relative;
+  @media only Screen and (max-width: 64em) {
+    margin: 10rem calc(4rem + 5vw);
+  }
+  @media only Screen and (max-width: 48em) {
+    display: block;
+    &:last-child {
+      margin-bottom: 2rem;
+    }
+  }
+  @media only Screen and (max-width: 40em) {
+    margin: 10rem calc(2rem + 3vw);
+    &:last-child {
+      margin-bottom: 1rem;
+    }
+  }
+`;
 const Services = () => {
   return <ServiceSection>
     <Background>
@@ -66,9 +92,13 @@ const Services = () => {
     </Background>
 
     <Content>
-
-      
-    </Content>
+      <TextBlock 
+        topic="Design"
+        title="We build award winning Designs"
+        subText="We help clients to build great design to attract more Clients."
+        />
+        <SvgBlock svg="Design.svg"/>
+      </Content>
 
   </ServiceSection>;
 }
