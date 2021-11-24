@@ -366,9 +366,9 @@ const Services = () => {
             </h5>
           }
         />
-        <OBJ>
+        {/* <OBJ>
           <img src={Capsule} alt="Capsule Object" width="400" height="400" />
-        </OBJ>
+        </OBJ> */}
         <SvgBlock svg="Support.svg" />
       </Content>
     </ServiceSection>
