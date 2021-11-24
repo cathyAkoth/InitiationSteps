@@ -36,12 +36,22 @@ html{
     }
     h1,
     h2,
-    h3,
     h4,
     h5,
     h6 {
         margin:0;
         padding:0;
+        
+    }
+    h3 {
+        margin:0;
+        padding:0;
+        color:#09009b;
+        font-size:50px;
+    
+    span{
+        color:#ffa400;
+    }
     }
     a {
         text-decoration: none;

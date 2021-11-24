@@ -2,7 +2,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-import logo from "../../assets/logos.png";
+import logo from "../../assets/logo2.png";
 
 
 const Headers = styled.header`
@@ -10,8 +10,9 @@ const Headers = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5rem;
-  background-color: var(--nav);
-  color: var(--white);
+  /* background-color:white; */
+   background-color: var(--nav); 
+  /* color: var(--white); */
   position: relative;
   z-index: 500;
   @media only Screen and (max-width: 64em) {
@@ -19,13 +20,14 @@ const Headers = styled.header`
   }
   @media only Screen and (max-width: 40em) {
     padding: 0.5rem 1.5rem;
+    
   }
 `;
 
 const Logo = styled.a`
   display: flex;
   align-items: center;
-  width: 2rem;
+  width: 5rem;
   height: auto;
   cursor: pointer;
   img {
@@ -35,6 +37,7 @@ const Logo = styled.a`
 
 const Nav = styled.nav`
   width: 25rem;
+  height: 100px; 
   max-width: 40rem;
   display: flex;
   align-items: center;
@@ -234,8 +237,8 @@ const Header = () => {
   return (
     <Headers ref={ref}>
       <Logo>
-        <img src={logo} alt="CodeBucks" />
-        <h3>CodeBucks</h3>
+        <img src={logo} alt="InitiationSteps" />
+        <h3>Initiation<span>Steps</span></h3>
       </Logo>
       <Nav>
         <a href="#home" onClick={(e) => scrollUp("home", e)}>
