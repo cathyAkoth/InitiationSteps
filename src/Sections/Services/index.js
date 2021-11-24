@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Tube from "../../assets/3dtube.png";
-import Cone from "../../assets/3dtriangle.png";
+// import Cone from "../../assets/3dtriangle.png";
 import Capsule from "../../assets/3dcapsule.png";
 
 import TextBlock from "../../components/TextBlock";
@@ -349,9 +349,9 @@ const Services = () => {
             </h5>
           }
         />
-        <OBJ>
+        {/* <OBJ>
           <img src={Cone} alt="Cone Object" width="400" height="400" />
-        </OBJ>
+        </OBJ> */}
         <SvgBlock svg="Develope.svg" />
       </Content>
       <Content>
